@@ -420,10 +420,10 @@
                                              'vertical-label 'horizontal-label
                                              'deleted)) '(single)]
                 [#:font font (is-a?/c gui:font%) gui:normal-control-font]
-                [#:keymap keymap (is-a?/c gui:keymap%) (new gui:keymap%)]
-                [#:margin margin (maybe-obs/c margin/c) '(0 0)]
+                [#:keymap keymap (is-a?/c gui:keymap%) the-default-keymap]
+                [#:margin margin (maybe-obs/c margin/c) '(2 2)]
                 [#:min-size min-size (maybe-obs/c size/c) '(#f #f)]
-                [#:stretch stretch (maybe-obs/c stretch/c) '(#t #t)]
+                [#:stretch stretch (maybe-obs/c stretch/c) '(#t #f)]
                 [#:mixin mix (make-mixin-contract gui:text-field%) values]
                 [#:value=? value=? (-> any/c any/c boolean?) equal?]
                 [#:value->text value->text (-> any/c string?) values]) (is-a?/c view<%>)]{
